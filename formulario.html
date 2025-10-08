@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario</title>
+  <link rel="stylesheet" href="form-styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>Formulario de Ejemplo</h1>
+      <form action="#" method="post" novalidate>
+        <div class="grid">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+            <small class="hint">Obligatorio</small>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input id="apellido" name="apellido" type="text" placeholder="Tu apellido" required />
+            <small class="hint">Obligatorio</small>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+591 70000000" pattern="[\+\d\s\-]{7,}" inputmode="tel" />
+            <small class="hint">Ej: +591 70000000</small>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="form-group">
+            <label for="clave">Contraseña</label>
+            <input id="clave" name="clave" type="password" placeholder="••••••••" minlength="6" required />
+            <small class="hint">Mínimo 6 caracteres</small>
+          </div>
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input id="edad" name="edad" type="number" min="1" max="120" placeholder="Ej: 21" />
+          </div>
+        </div>
+        <div class="grid">
+          <div class="form-group">
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input id="nacimiento" name="nacimiento" type="date" />
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora de cita</label>
+            <input id="hora" name="hora" type="time" />
+          </div>
+        </div>
+        <div class="grid">
+          <div class="form-group">
+            <label for="web">Sitio web</label>
+            <input id="web" name="web" type="url" placeholder="https://tusitio.com" />
+          </div>
+          <div class="form-group">
+            <label for="color">Color favorito</label>
+            <input id="color" name="color" type="color" value="#38bdf8" class="color-input" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="archivo">Archivo</label>
+          <input id="archivo" name="archivo" type="file" />
+        </div>
+        <fieldset class="fieldset">
+          <legend>Género</legend>
+          <label class="radio">
+            <input type="radio" name="genero" value="masculino" required />
+            <span>Masculino</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="genero" value="femenino" />
+            <span>Femenino</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="genero" value="otros" />
+            <span>Otros</span>
+          </label>
+        </fieldset>
+        <fieldset class="fieldset">
+          <legend>Intereses</legend>
+          <label class="check">
+            <input type="checkbox" name="musica" />
+            <span>Música</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="deporte" />
+            <span>Deporte</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="lectura" />
+            <span>Lectura</span>
+          </label>
+        </fieldset>
+        <div class="form-group">
+          <label for="pais">País</label>
+          <select id="pais" name="pais">
+            <option value="bolivia">Bolivia</option>
+            <option value="argentina">Argentina</option>
+            <option value="chile">Chile</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comentarios">Comentarios</label>
+          <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí..."></textarea>
+        </div>
+        <div class="actions">
+          <button type="reset" class="btn ghost">Borrar</button>
+          <button type="submit" class="btn primary">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
